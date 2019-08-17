@@ -1,0 +1,25 @@
+function code(input) {
+    let stringNumber = input[0];
+
+    for (let i = stringNumber.length - 1; i >= 0; i--) {
+        let currentDigitToNumber = Number(stringNumber[i]);
+        if (currentDigitToNumber == 0) {
+            console.log('ZERO');
+            continue;
+        }
+      //  console.log(currentDigitToNumber);
+        let printLine = '';
+        for (let n = 1; n <= currentDigitToNumber; n++) {
+            printLine += String.fromCharCode(currentDigitToNumber + 33);
+          
+        }
+        console.log(printLine);
+        for (let n = 1; n <= currentDigitToNumber; n++) {
+            printLine += String.fromCharCode(currentDigitToNumber + 33);  
+           
+        }
+       // console.log(printLine);
+    }
+
+
+}
