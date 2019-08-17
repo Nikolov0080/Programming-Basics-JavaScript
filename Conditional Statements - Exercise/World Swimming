@@ -1,0 +1,18 @@
+function world(input) {
+    let recordInSeconds = Number(input.shift());
+    let distanceInMeters = Number(input.shift());
+    let timeFor1Meter = Number(input.shift());
+
+    let swimInSec = distanceInMeters * timeFor1Meter;
+    let swim15 = Math.trunc(distanceInMeters / 15) * 12.5;
+
+    let fullTime = swim15 + swimInSec;
+  
+
+    if (recordInSeconds > fullTime) {
+        console.log(`Yes, he succeeded! The new world record is ${fullTime.toFixed(2)} seconds.`);
+    } else { 
+        let recordKillTime = Math.abs(fullTime - recordInSeconds);
+        console.log(`No, he failed! He was ${recordKillTime.toFixed(2)} seconds slower.`);
+    }
+}
