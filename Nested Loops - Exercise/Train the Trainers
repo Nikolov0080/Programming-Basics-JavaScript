@@ -1,0 +1,22 @@
+function seven(input) {
+    let count = Number(input.shift());
+
+    let presentation = input.shift();
+    let totalSum = 0;
+    let counter = 0;
+    while (presentation != 'Finish') {
+        let sumGrades = 0;
+        for (let i = 0; i < count; i++) {
+            let grade = Number(input.shift());
+            sumGrades += grade;
+            counter++;
+        }
+        totalSum += sumGrades;
+        let resultAvgGrades = sumGrades / count;
+        console.log(`${presentation} - ${resultAvgGrades.toFixed(2)}.`);
+        presentation = input.shift();
+
+    }
+    let averageTotal = totalSum / counter;
+    console.log(`Student's final assessment is ${averageTotal.toFixed(2)}.`);
+}
