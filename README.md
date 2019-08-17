@@ -1,1 +1,1 @@
-# dick
+# SoftUni course 
