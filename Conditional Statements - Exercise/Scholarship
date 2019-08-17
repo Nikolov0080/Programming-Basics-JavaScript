@@ -1,0 +1,23 @@
+function scholarship(input) {
+    let income = Number(input.shift());
+    let averageSuccess = Number(input.shift());
+    let minWage = Number(input.shift());
+
+
+    let socialWage = Math.round(minWage * 0.35, 0, 6);
+    let exellentWage = Math.floor(averageSuccess * 25);
+
+    if (income > minWage && averageSuccess < 4.5) {
+        console.log("You cannot get a scholarship!");
+    } else if (income < minWage && averageSuccess >= 5.5 && socialWage >= exellentWage) {
+        console.log(`You get a Social scholarship ${Math.floor(socialWage)} BGN`);
+    } else if (income < minWage && averageSuccess >= 5.5 && socialWage < exellentWage) {
+        console.log(`You get a scholarship for excellent results ${Math.floor(exellentWage)} BGN`);
+    } else if (income < minWage && averageSuccess > 4.5) {
+        console.log(`You get a Social scholarship ${Math.floor(socialWage)} BGN`);
+    } else if (income >= minWage && averageSuccess >= 5.5) {
+        console.log(`You get a scholarship for excellent results ${Math.floor(exellentWage)} BGN`);
+    } else {
+        console.log("You cannot get a scholarship!");
+    }
+}
