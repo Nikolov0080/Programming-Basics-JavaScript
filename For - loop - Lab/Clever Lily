@@ -1,0 +1,32 @@
+function lily(input) {
+
+
+    let age = Number(input[0]);
+    let washPrice = Number(input[1]);
+    let toyPrice = Number(input[2]);
+
+    let moneyYears = 0;
+    let toyYears = 0;
+    for (let i = 1; i <= age; i++) {
+        if (i % 2 === 0) {
+            moneyYears++;
+        } else {
+            toyYears++;
+        }
+    }
+    let money = 0;
+    for (let i = 0; i <= moneyYears; i++) {
+        money += 10 * i;
+    }
+
+    money += (toyYears * toyPrice) - moneyYears;
+   // money -= moneyYears ;
+
+    let difference = Math.abs(washPrice - money);
+
+    if (money >= washPrice) {
+        console.log(`Yes! ${difference.toFixed(2)}`);
+    } else {
+        console.log(`No! ${difference.toFixed(2)}`);
+    }
+}
