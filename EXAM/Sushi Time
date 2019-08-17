@@ -1,0 +1,66 @@
+function sushi(input) {
+    let sushiType = input.shift();
+    let restaurantName = input.shift();
+    let portionCount = Number(input.shift());
+    let orderSymbol = input.shift();
+
+    // let sashimiPrice = 0;
+    //  let makiPrice = 0;
+    //  let uramakiPrice = 0;
+    //  let temakiPrice = 0;
+    let price = 0;
+    if (restaurantName == 'Sushi Zone') {
+        if (sushiType == 'sashimi') {
+            price = 4.99;
+        } else if (sushiType == 'maki') {
+            price = 5.29;
+        } else if (sushiType == 'uramaki') {
+            price = 5.99;
+        } else if (sushiType == 'temaki') {
+            price = 4.29;
+        }
+    } else if (restaurantName == 'Sushi Time') {
+        if (sushiType == 'sashimi') {
+            price = 5.49;
+        } else if (sushiType == 'maki') {
+            price = 4.69;
+        } else if (sushiType == 'uramaki') {
+            price = 4.49;
+        } else if (sushiType == 'temaki') {
+            price = 5.19;
+        }
+
+    } else if (restaurantName == 'Sushi Bar') {
+        if (sushiType == 'sashimi') {
+            price = 5.25;
+        } else if (sushiType == 'maki') {
+            price = 5.55;
+        } else if (sushiType == 'uramaki') {
+            price = 6.25;
+        } else if (sushiType == 'temaki') {
+            price = 4.75;
+        }
+
+    } else if (restaurantName == 'Asian Pub') {
+        if (sushiType == 'sashimi') {
+            price = 4.50;
+        } else if (sushiType == 'maki') {
+            price = 4.80;
+        } else if (sushiType == 'uramaki') {
+            price = 5.50;
+        } else if (sushiType == 'temaki') {
+            price = 5.50;
+        }
+
+    } else {
+        console.log(`${restaurantName} is invalid restaurant!`);
+        return;
+    }
+    let orderPrice = price * portionCount;
+    if (orderSymbol == 'Y') {
+        orderPrice += orderPrice * 0.2;
+    }
+
+    let result = `Total price: ${Math.ceil(orderPrice)} lv.`
+    console.log(result);
+}
