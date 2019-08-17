@@ -1,0 +1,12 @@
+function num(input) {
+    let sum = 0;
+    let numbersCount = input.shift();
+
+    for (let i = 0; i < numbersCount; i++) {
+        let userNumber = Number(input.shift());
+
+
+        sum += userNumber;
+    }
+    console.log(sum);
+}
