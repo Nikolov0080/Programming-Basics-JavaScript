@@ -1,0 +1,36 @@
+function coints(input) {
+    let cash = Number(input.shift());
+    let coins = 0;
+
+    while (cash > 0) {
+        if (cash >= 2) {
+            cash -= 2;
+            coins++;
+        } else if (cash >= 1) {
+            cash -= 1;
+            coins++;
+        } else if (cash >= 0.5) {
+            cash -= 0.5;
+            coins++;
+        } else if (cash >= 0.2) {
+            cash -= 0.2;
+            coins++;
+        } else if (cash >= 0.1) {
+            cash -= 0.1;
+            coins++;
+        } else if (cash >= 0.05) {
+            cash -= 0.05;
+            coins++;
+        } else if (cash >= 0.02) {
+            cash -= 0.02;
+            coins++;
+        } else if (cash >= 0.01) {
+            cash -= 0.01;
+            coins++;
+        }
+        cash = cash.toFixed(2);
+    }
+
+
+    console.log(coins);
+}
