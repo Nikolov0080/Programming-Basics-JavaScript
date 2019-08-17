@@ -1,0 +1,25 @@
+function animalType(input) {
+    let animal = input.shift();
+    switch (animal) {
+        case "dog": {
+            console.log("mammal");
+            return;
+        }
+        case "tortoise": {
+            console.log("reptile");
+            return;
+        }
+        case "cat": {
+            console.log("unknown");
+            return;
+        }
+        case "crocodile": {
+            console.log("reptile");
+            return;
+        }
+        case "snake": {
+            console.log("reptile");
+            return;
+        }
+    }
+}
