@@ -1,0 +1,18 @@
+function table(input) {
+    let n = input.shift();
+    //let nString = n.toString;
+
+    let a1 = n.toString().charAt(0);
+    let a2 = n.toString().charAt(1);
+    let a3 = n.toString().charAt(2);
+
+    for (let i = 1; i <= a3; i++) {
+        for (let j = 1; j <= a2; j++) {
+            for (let k = 1; k <= a1; k++) {
+                let result = i*j*k;
+                console.log(`${i} * ${j} * ${k} = ${result};`)
+            }
+        }
+    }
+
+}
