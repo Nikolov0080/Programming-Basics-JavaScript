@@ -1,0 +1,28 @@
+function element(input) {
+
+    let n = Number(input.shift());
+    let sum = 0;
+    let maxNum = Number.MIN_SAFE_INTEGER;
+
+    for (let i = 0; i < n; i++) {
+        let num = Number(input[i]);
+        sum += num;
+
+        if (num > maxNum) {                         // WORK !
+            maxNum = num;
+        }
+
+
+    }
+
+    sum -= maxNum;
+
+    if (sum === maxNum) {
+        console.log(`Yes\nSum = ${sum}`)
+    } else {
+        let diff = Math.abs(sum - maxNum);
+        console.log(`No\nDiff = ${diff}`);
+    }
+
+
+}
