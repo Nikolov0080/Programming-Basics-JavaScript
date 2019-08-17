@@ -1,0 +1,23 @@
+function ooo(input) {
+    let numbersCount = Number(input[0]);
+    let numberMaxCount = numbersCount * 2;
+
+    let leftSum = 0;
+    let rightSum = 0;
+
+    for (let i = 1; i <= numberMaxCount; i++) {
+        let userNumber = Number(input[i]);
+        if (i <= numbersCount) {
+            leftSum += userNumber;
+        } else {
+            rightSum += userNumber;
+        }
+    }
+
+    if (leftSum === rightSum) {
+        console.log(`Yes, sum = ${leftSum}`);
+    } else {
+        let diff = Math.abs(leftSum - rightSum);
+        console.log(`No, diff = ${Math.abs(diff)}`);
+    }
+}
