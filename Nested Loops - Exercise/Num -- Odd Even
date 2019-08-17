@@ -1,0 +1,44 @@
+function five(input) {
+    let num1 = Number(input[0]);
+    let num2 = Number(input[1]);
+
+    let output = '';
+
+    for (let i = num1; i <= num2; i++) {
+        let currentNum = String(i);
+
+        let leftSum = 0;
+
+        let midNum = 0;
+
+        let rightSum = 0;
+
+        for (let j = 0; j < currentNum.length; j++) {
+            let value = Number(currentNum[j]);
+
+            switch (j) {
+                case 0: leftSum += value;
+                    break;
+                case 1: leftSum += value;
+                    break;
+                case 2: midNum += value;
+                    break;
+                case 3: rightSum += value;
+                    break;
+                case 4: rightSum += value;
+                    break;
+            }
+        }
+        if (leftSum == rightSum) {
+            output += `${i} `;
+        } else {
+            let min = Math.min(leftSum, rightSum);
+            let max = Math.max(leftSum, rightSum);
+            min += midNum;
+            if (min == max) {
+                output += `${i} `;
+            }
+        }
+    }
+    console.log(output);
+}
