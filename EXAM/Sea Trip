@@ -1,0 +1,12 @@
+function ex(input) {
+    let foodMoney = Number(input.shift());
+    let sovenirMoney = Number(input.shift());
+    let hotelMoney = Number(input.shift());
+    let gasPrice = 1.85;
+    let toSea = 210;
+    let gasMoney = (((toSea * 2) / 100) * 7) * gasPrice;
+    let foodSovenir = (3 * sovenirMoney) + (3 * foodMoney);
+    let hotelDays = (hotelMoney * 0.9) + (hotelMoney * 0.85) + (hotelMoney * 0.8);
+    let totalMoney = gasMoney + foodSovenir + hotelDays;
+     console.log(`Money needed: ${totalMoney.toFixed(2)}`);
+}
