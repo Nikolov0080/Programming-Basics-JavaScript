@@ -1,0 +1,24 @@
+function alcoholMarket(input){
+    let whiskeyPrice = Number(input.shift());
+    let beerQuantity = Number(input.shift());
+    let wineQuantity = Number(input.shift());
+    let rakiyaQuantity = Number(input.shift());
+    let whiskeyQuantity = Number(input.shift());
+
+
+    let rakiyaPrice = (0.5 * whiskeyPrice);
+    let winePrice = rakiyaPrice - (0.4 * rakiyaPrice);
+    let beerPrice = rakiyaPrice - (0.8 * rakiyaPrice);
+
+
+    let rakiyaSum = rakiyaQuantity * rakiyaPrice;
+    let wineSum = wineQuantity * winePrice;
+    let beerSum = beerQuantity * beerPrice;
+    let whiskeySum = whiskeyQuantity * whiskeyPrice;
+
+
+    let result = (rakiyaSum + wineSum + beerSum + whiskeySum);
+
+    console.log(result.toFixed(2));
+ 
+}
