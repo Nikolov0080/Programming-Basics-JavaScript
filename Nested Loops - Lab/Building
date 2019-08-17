@@ -1,0 +1,30 @@
+function build(input) {
+    let floorCount = Number(input[0]);
+    let roomCount = Number(input[1]);
+
+
+
+    for (let floor = floorCount; floor > 0; floor--) {
+        let outPut = '';
+        for (let room = 0; room < roomCount; room++) {
+            if (floor == floorCount) {
+                outPut += (`L${floor}${room} `);
+                continue;
+            }
+            if (floor % 2 == 0) {
+                outPut += (`O${floor}${room} `);
+
+            } else {
+                outPut += (`A${floor}${room} `);
+
+            }
+        }
+        console.log(outPut);
+    }
+
+
+
+
+
+
+}
