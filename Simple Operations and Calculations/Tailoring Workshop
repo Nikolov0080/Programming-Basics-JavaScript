@@ -1,0 +1,15 @@
+function tailoringWorkShop(input){
+    let table = Number(input.shift());
+    let tableLength = Number(input.shift());
+    let tableWidth = Number(input.shift());
+
+    let coveredArea = table * (tableLength + 2 * 0.30) * (tableWidth + 2 * 0.30);
+    let squaresArea = table * (tableLength / 2) * (tableLength / 2);
+
+    let priceInDollars = coveredArea * 7 +squaresArea * 9;
+    let priceInLeva = priceInDollars * 1.85;
+
+    console.log(`${priceInDollars.toFixed(2)}`+" USD");
+    console.log(`${priceInLeva.toFixed(2)}`+" BGN");
+
+}
