@@ -1,0 +1,14 @@
+function solve (input){
+    let lenght = Number(input.shift());
+let width = Number(input.shift());
+let side = Number(input.shift());
+
+let hallSize = (lenght*100)*(width * 100);
+let side1 = (side * 100)*(side*100);
+let benchSize = hallSize/10;
+let freeSpace = hallSize - benchSize -side1;
+let dancer = freeSpace/(40+7000);
+
+console.log(parseInt(dancer));
+
+}
