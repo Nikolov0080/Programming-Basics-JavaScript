@@ -1,0 +1,26 @@
+function magick(input) {
+    let magickNum = Number(input.shift());
+    let i = 1;
+    let result = '';
+    for (let one = 1; one <= 9; one++) {
+        for (let two = 1; two <= 9; two++) {
+            for (let three = 1; three <= 9; three++) {
+                for (let four = 1; four <= 9; four++) {
+                    for (let five = 1; five <= 9; five++) {
+                        for (let six = 1; six <= 9; six++) {
+                            let product = one * two * three * four * five * six;
+
+                            if (product == magickNum) {
+                                result += `${one}${two}${three}${four}${five}${six} `
+
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    console.log(result);
+
+}
