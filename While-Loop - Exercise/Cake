@@ -1,0 +1,32 @@
+function cake(input) {
+    let width = Number(input.shift());
+    let height = Number(input.shift());
+
+    let cakeSize = width * height;
+
+    let pieces = 0;
+
+    while (cakeSize >= 0 && pieces !== 'STOP') {
+        let pieces = input.shift();
+        if(pieces=='STOP'){
+            if (cakeSize >= 1) {
+                console.log(`${cakeSize} pieces are left.`);
+                return;
+            } else {
+                console.log(`No more cake left! You need ${Math.abs(cakeSize)} pieces more.`);
+        
+            }
+        }
+        if (pieces !== 'STOP') {
+            cakeSize -= pieces;
+           
+        }
+    }
+    if (cakeSize >= 1) {
+        console.log(`${cakeSize} pieces are left.`);
+        return;
+    } else {
+        console.log(`No more cake left! You need ${Math.abs(cakeSize)} pieces more.`);
+
+    }
+}
