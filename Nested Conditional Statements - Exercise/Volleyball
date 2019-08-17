@@ -1,0 +1,23 @@
+function journey(input) {
+    let yearType = input.shift();
+    let holydays = Number(input.shift());
+    let weekEndsCity = Number(input.shift());
+    // GAMES IN SOFIA !!!
+    let sofiaWeekends = 48 - weekEndsCity;
+    let gamesInSofia = sofiaWeekends * (3.0 / 4);
+    // END !!
+
+    //HOLYDAY GAMES IN SOFIA !!!
+    let holydaySofiaGames = holydays * 2 / 3;
+    //END !!!
+    let allYearGames = gamesInSofia + weekEndsCity + holydaySofiaGames;
+
+    let result = 0;
+    if (yearType == 'leap') {
+        result = allYearGames + (allYearGames * 0.15);
+    } else {
+        result = allYearGames;
+    }
+
+    console.log((Math.floor(result)));
+}
