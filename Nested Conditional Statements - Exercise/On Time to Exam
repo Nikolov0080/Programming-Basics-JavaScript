@@ -1,0 +1,47 @@
+function exam(input) {
+    let examHours = Number(input.shift());
+    let examMinutes = Number(input.shift());
+    let arrivalHours = Number(input.shift());
+    let arrivalMinutes = Number(input.shift());
+
+    let examTotalMins = examHours * 60 + examMinutes;
+    let arrivalTotalMins = arrivalHours * 60 + arrivalMinutes;
+
+    let result = examTotalMins - arrivalTotalMins;
+
+    if (result < 0) {
+        console.log('Late');
+        let hours = Math.floor(Math.abs(result) / 60);
+        let mins = Math.abs(result) % 60;
+
+
+
+
+        if (Math.abs(result) < 60 && Math.abs(result) > 0) {
+            console.log(`${mins} minutes after the start`);
+        } else if (mins < 10) {
+            console.log(`${hours}:0${mins} hours after the start`);
+        } else {
+            console.log(`${hours}:${mins} hours after the start`);
+        }
+
+
+    } else if (result >= 0 && result <= 30) {
+        console.log('On time');
+        console.log(`${result} minutes before the start`);
+    } else {
+        console.log('Early');
+        let hours = Math.floor(result / 60);
+        let mins = result % 60;
+
+        if (result < 60) {
+            console.log(`${mins} minutes before the start`);
+        } else if (mins < 10) {
+            console.log(`${hours}:0${mins} hours before the start`);
+        } else {
+            console.log(`${hours}:${mins} hours before the start`);
+        }
+
+    }
+
+}
