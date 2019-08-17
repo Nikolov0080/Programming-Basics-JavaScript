@@ -1,0 +1,23 @@
+function bus(input) {
+    let passengers = Number(input.shift());
+    let stops = Number(input.shift());
+
+    let stopsCounter = 0;
+
+    for (let i = 1; i <= stops; i++) {
+        stopsCounter++;
+        passengers -= Number(input.shift());
+        passengers += Number(input.shift());
+
+        if (stopsCounter % 2 == 0) {
+            passengers -= 2;
+        }
+        if (stopsCounter % 2 !== 0) {
+            passengers += 2;
+        }
+
+
+    }
+    console.log(`The final number of passengers is : ${passengers}`);
+
+}
