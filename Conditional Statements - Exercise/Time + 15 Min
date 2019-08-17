@@ -1,0 +1,19 @@
+function min15(input) {
+    let totalHours = Number(input.shift());
+    let totalMinutes = Number(input.shift());
+
+    let totalMinutes1 = totalHours * 60 + totalMinutes + 15;
+    let finalHours = Math.floor(totalMinutes1 / 60);
+    let finalMinutes = totalMinutes1 % 60;
+
+    if (finalHours >= 24) {
+        finalHours -= 24;
+    }
+
+    if (finalMinutes < 10) {
+        console.log(`${finalHours}:0${finalMinutes}`);
+    } else {
+        console.log(`${finalHours}:${finalMinutes}`);
+
+    }
+}
