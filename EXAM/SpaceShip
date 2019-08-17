@@ -1,0 +1,20 @@
+function space(input) {
+    let width = Number(input.shift());
+    let long = Number(input.shift());
+    let height = Number(input.shift());
+    let astronautHeight = Number(input.shift());
+
+    let rocketSize = width * long * height;
+
+    let roomSize = (astronautHeight + 0.40) * 2 * 2;
+
+    let roomsCount = Math.floor(rocketSize / roomSize);
+
+    if (roomsCount >= 3 && 10 >= roomsCount) {
+        console.log(`The spacecraft holds ${roomsCount} astronauts.`);
+    } else if (roomsCount < 3) {
+        console.log(`The spacecraft is too small.`)
+    } else if (roomsCount > 10) {
+        console.log(`The spacecraft is too big.`)
+    }
+}
