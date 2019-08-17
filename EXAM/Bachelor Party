@@ -1,0 +1,31 @@
+function party(input) {
+    let guestPlayer = Number(input.shift());
+
+    let groups = input.shift();
+    let reservationPrice = 0;
+    let groupIncome = 0;
+    let people = Number(0);
+    while (groups != 'The restaurant is full') {
+
+        if (groups < 5) {
+            reservationPrice = 100;
+        } else if (groups >= 5) {
+            reservationPrice = 70;
+        }
+
+
+        groupIncome += reservationPrice * groups;
+
+        people += Number(groups);
+
+        groups = input.shift();
+    }
+
+    let result = groupIncome - guestPlayer;
+
+    if (result >= 0) {
+        console.log(`You have ${people} guests and ${result} leva left.`);
+    } else if (result < 0) {
+        console.log(`You have ${people} guests and ${Math.abs(groupIncome)} leva income, but no singer.`);
+    }
+}
